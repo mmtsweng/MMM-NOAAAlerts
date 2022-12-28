@@ -1,0 +1,41 @@
+#NOAA_Alert {
+    font-size: small;
+    display: block;
+    width: 800px;
+    z-index: 3;
+    margin: 0 auto;
+}
+
+#NOAA_Alert .inactive{
+    display: none;
+}
+
+#NOAA_Alert .active{
+    display: block;
+}
+
+#NOAA_Alert .Severe {
+    color: red;
+}
+
+#NOAA_Alert .Moderate {
+    color: yellow;
+}
+
+#NOAA_Alert .event
+{
+    font-weight: bold;
+    display: inline;
+}
+
+#NOAA_Alert .headline
+{
+    color: #ccc;
+    display: inline;
+}
+
+#NOAA_Alert .description
+{
+    font-size: x-small;
+    color: #999;
+}

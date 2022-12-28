@@ -1,0 +1,11 @@
+{% if APIData.alertCount > 0  %}
+<div id="NOAA_Alert">
+    {% for al in APIData.alerts %}
+    <div class="alert {{al.severity}} inactive">
+        <div class="event">{{al.event}}</div>
+        <div class="headline">{{al.headline}}</div>
+        <div class="description">{{al.description}}</div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}

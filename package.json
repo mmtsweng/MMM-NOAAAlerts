@@ -1,0 +1,24 @@
+{
+    "name": "MMM-NOAAAlerts",
+    "version": "1.0.0",
+    "description": "A Magic Mirror module to display current local weather warning and alerts.",
+    "main": "MMM-NOAAAlerts.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/mmtsweng/MMM-NOAAAlerts.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/mmtsweng/MMM-NOAAAlerts/issues"
+    },
+    "homepage": "https://github.com/mmtsweng/MMM-NOAAAlerts#readme",
+    "dependencies": {
+      "url": "^0.11.0"
+    }
+  }
+  
