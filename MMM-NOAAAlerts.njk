@@ -4,8 +4,11 @@
     <div class="alert {{al.severity}} inactive">
         <div class="event">{{al.event}}</div>
         <div class="headline">{{al.headline}}</div>
-        <div class="description">{{al.description}}</div>
+        {% if config.showDescription %}<div class="description">{{al.description}}</div>{% endif %}
+        {% if config.showInstruction %}<div class="information">{{al.instruction}}</div>{% endif %}
     </div>
     {% endfor %}
 </div>
+{% else %}
+    {% if config.showNoAlertText %}<div class="alert">{{config.noAlertText}}</div>{% endif %}
 {% endif %}

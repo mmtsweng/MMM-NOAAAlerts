@@ -1,5 +1,5 @@
 #NOAA_Alert {
-    font-size: small;
+    font-size: medium;
     display: block;
     width: 800px;
     z-index: 3;
@@ -36,6 +36,12 @@
 
 #NOAA_Alert .description
 {
-    font-size: x-small;
+    font-size: small;
     color: #999;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		white-space: normal;
 }

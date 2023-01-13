@@ -15,11 +15,15 @@
         // anything here in defaults will be added to the config data
         // and replaced if the same thing is provided in config
         defaults: {
-            debug: true,
+            debug: false,
             APIURL: "https://api.weather.gov/alerts/active?point=47.593,-122.333",
-            updateInterval: 15 * 60 * 1000, //Default every 15 minutes.
-            rotateInterval: 5 * 1000, //Every 5 seconds
-            userAgent: "MagicMirrorMMTSWENG", // user defined usage: myweatherapp.com, contact@myweatherapp.com
+            updateInterval: 30 * 60 * 1000, 
+            rotateInterval: 15 * 1000, 
+            userAgent: "MagicMirrorMMTSWENG", 
+            showDescription: true,
+            showInstruction: false,
+            showNoAlertText: false,
+            noAlertText: 'There are no active weather alerts in this area',
             removeGap: true,
         },
 

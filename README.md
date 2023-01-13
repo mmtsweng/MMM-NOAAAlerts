@@ -55,4 +55,8 @@ NOAA requires that a User-Agent header be provided. Please set your own custom a
 | APIURL | `https://api.weather.gov/alerts/active?point=47.593,-122.333` | NOAA API call |
 | userAgent | MagicMirrorMMTSWENG | API requires a User-Agent Header. This configuration allows for unique identification of the use |
 | rotateInterval | 15 seconds | [Optional] How often to switch to the next alert/alarm |
+| showDescription | true | [Optional]  Show the detailed description. |
+| showInstruction | false | [Optional]  Show instructions provided by NOAA |
+| showNoAlertText | false | [Optional]  Show noAlertText if there are no active events |
+| noAlertText |  [Optional] 'There are no active weather alerts in this area' | Text to display if showNoAlertText is true |
 | `debug` | `false` | [Optional] Render extensive debug information to the console to validate functionality |
