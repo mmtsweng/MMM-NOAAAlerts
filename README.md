@@ -50,7 +50,7 @@ NOAA requires that a User-Agent header be provided. Please set your own custom a
 ## Configuration Options
 | **Option** | **Default** | **Description** |
 | --- | --- | --- |
-| updateInterval | 30 minutes | [Optional] How often to request data from the API|
+| updateInterval | 30 minutes | [Optional] How often to request data from the API. Note: Marquee animation is defaulted to 30 seconds|
 | rotateInterval | 15 seconds | [Optional] How often to rotate to the next alarm/statement |
 | APIURL | `https://api.weather.gov/alerts/active?point=47.593,-122.333` | NOAA API call |
 | userAgent | MagicMirrorMMTSWENG | API requires a User-Agent Header. This configuration allows for unique identification of the use |
@@ -58,5 +58,6 @@ NOAA requires that a User-Agent header be provided. Please set your own custom a
 | showDescription | true | [Optional]  Show the detailed description. |
 | showInstruction | false | [Optional]  Show instructions provided by NOAA |
 | showNoAlertText | false | [Optional]  Show noAlertText if there are no active events |
+| showAsMarquee | false | [Optional]  If true, the descriptions and instructions will scroll from left-to-right |
 | noAlertText |  [Optional] 'There are no active weather alerts in this area' | Text to display if showNoAlertText is true |
 | `debug` | `false` | [Optional] Render extensive debug information to the console to validate functionality |

@@ -25,6 +25,7 @@
             showNoAlertText: false,
             noAlertText: 'There are no active weather alerts in this area',
             removeGap: true,
+            showAsMarquee: false
         },
 
         getTemplate: function() {

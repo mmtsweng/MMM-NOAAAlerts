@@ -1,9 +1,15 @@
+.MMM-NOAAAlerts {
+    margin: 0;
+}
 #NOAA_Alert {
     font-size: medium;
     display: block;
-    width: 800px;
+    width: 100%;
     z-index: 3;
-    margin: 0 auto;
+    margin: 0;
+}
+#NOAA_Alert .alert{
+    overflow: hidden;
 }
 
 #NOAA_Alert .inactive{
@@ -22,6 +28,11 @@
     color: yellow;
 }
 
+#NOAA_Alert .title
+{
+    text-align: center;
+}
+
 #NOAA_Alert .event
 {
     font-weight: bold;
@@ -32,9 +43,11 @@
 {
     color: #ccc;
     display: inline;
+    text-overflow:ellipsis;
+	overflow:hidden;
 }
 
-#NOAA_Alert .description
+#NOAA_Alert .description,  #NOAA_Alert .instruction
 {
     font-size: small;
     color: #999;
@@ -44,4 +57,61 @@
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
 		white-space: normal;
+}
+
+/* define the marquee animation */
+#NOAA_Alert .details
+{
+    overflow: hidden;
+    display: inline;
+}
+#NOAA_Alert .marqueeBox
+{
+    width: 60%;
+    overflow: hidden;
+    display: inline-flex;
+}
+#NOAA_Alert .marquee
+{
+    font-size: small;
+    color: #999;
+    display: inline-block;
+    clear: left;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: scroll-left 30s linear infinite;
+    -webkit-animation: scroll-left 30s linear infinite;
+    animation: scroll-left 30s linear infinite;
+}
+@-moz-keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+    }
+}
+@-webkit-keyframes scroll-left {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+@keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
 }

@@ -2,10 +2,19 @@
 <div id="NOAA_Alert">
     {% for al in APIData.alerts %}
     <div class="alert {{al.severity}} inactive">
+        <div class="title">
         <div class="event">{{al.event}}</div>
         <div class="headline">{{al.headline}}</div>
-        {% if config.showDescription %}<div class="description">{{al.description}}</div>{% endif %}
-        {% if config.showInstruction %}<div class="information">{{al.instruction}}</div>{% endif %}
+        </div>
+        
+        <div class="marqueeBox"><div class="details">
+        {% if config.showDescription %}
+            <div class="{% if config.showAsMarquee %} marquee {% else %} description {% endif %}">{{al.description}}</div>
+        {% endif %}
+        {% if config.showInstruction %}
+            <div class="{% if config.showAsMarquee %} marquee {% else %} instruction {% endif %}">{{al.instruction}}</div>
+        {% endif %}
+        </div></div>
     </div>
     {% endfor %}
 </div>
