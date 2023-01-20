@@ -59,5 +59,5 @@ NOAA requires that a User-Agent header be provided. Please set your own custom a
 | showInstruction | false | [Optional]  Show instructions provided by NOAA |
 | showNoAlertText | false | [Optional]  Show noAlertText if there are no active events |
 | showAsMarquee | false | [Optional]  If true, the descriptions and instructions will scroll from left-to-right |
-| noAlertText |  [Optional] 'There are no active weather alerts in this area' | Text to display if showNoAlertText is true |
+| noAlertText | 'There are no active weather alerts in this area' | [Optional] Text to display if showNoAlertText is true |
 | `debug` | `false` | [Optional] Render extensive debug information to the console to validate functionality |
