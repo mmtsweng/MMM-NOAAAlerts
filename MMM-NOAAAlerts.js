@@ -91,6 +91,7 @@
             if(notification === NOAA_ALERTS_FETCH_MESSAGE){
                 if (this.config.debug){Log.log(this.name + " received a Fetch Message: " + payload);}
                 this.APIData = payload;
+				this.activeItem = 0;
                 this.scheduleRotateInterval();
                 this.updateDom(100);
             }
