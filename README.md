@@ -13,6 +13,7 @@ Flood Warning:
 ### USING THE MODULE
 *Standard installation:*
 ````
+cd ~/MagicMirror/modules
 git clone https://github.com/mmtsweng/MMM-NOAAAlerts
 cd MMM-NOAAAlerts
 npm install 
@@ -41,7 +42,7 @@ There are multiple ways to set the forecast area, and NOAA provides through [doc
 | --- | --- |
 | By State | `https://api.weather.gov/alerts/active?area={state}` |
 | By [Zone](https://alerts.weather.gov/cap/wa.php?x=2) | `https://api.weather.gov/alerts/active?zone={zone}` |
-| By Lat/Long | `https://api.weather.gov/points/{latitude},{longitude}` |
+| By Lat/Long | `https://api.weather.gov/alerts/active?point={latitude},{longitude}` |
 | By Grid | `https://api.weather.gov/gridpoints/{office}/{grid X},{grid Y}/forecast` |
 
 
@@ -50,11 +51,11 @@ NOAA requires that a User-Agent header be provided. Please set your own custom a
 ## Configuration Options
 | **Option** | **Default** | **Description** |
 | --- | --- | --- |
-| updateInterval | 30 minutes | [Optional] How often to request data from the API. Note: Marquee animation is defaulted to 30 seconds|
-| rotateInterval | 15 seconds | [Optional] How often to rotate to the next alarm/statement |
+| updateInterval | 30 minutes (1800000ms) | [Optional] How often to request data from the API. Note: Marquee animation is defaulted to 30 seconds|
+| rotateInterval | 15 seconds (15000ms) | [Optional] How often to rotate to the next alarm/statement |
 | APIURL | `https://api.weather.gov/alerts/active?point=47.593,-122.333` | NOAA API call |
 | userAgent | MagicMirrorMMTSWENG | API requires a User-Agent Header. This configuration allows for unique identification of the use |
-| rotateInterval | 15 seconds | [Optional] How often to switch to the next alert/alarm |
+| rotateInterval | 15 seconds (15000ms) | [Optional] How often to switch to the next alert/alarm |
 | showDescription | true | [Optional]  Show the detailed description. |
 | showInstruction | false | [Optional]  Show instructions provided by NOAA |
 | showNoAlertText | false | [Optional]  Show noAlertText if there are no active events |
